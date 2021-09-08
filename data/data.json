@@ -50,7 +50,7 @@
       "src" : "../img/yellow_t.png"
     },
     {
-      "type" : "pants",
+      "type" : "skirt",
       "gender" : "female",
       "size" : "small",
       "color" : "pink",
