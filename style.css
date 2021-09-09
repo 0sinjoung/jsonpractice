@@ -106,3 +106,7 @@ main {
   height: 100%;
   margin-right: calc(var(--base-space) * 2);
 }
+
+.invisible {
+  display: none;
+}
