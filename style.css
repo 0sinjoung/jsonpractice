@@ -43,6 +43,7 @@ body {
   display: block;
   margin: 0 auto;
   transition: transform var(--animation-duration) ease;
+  cursor: pointer;
 }
 
 .shoping_nav {
