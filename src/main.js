@@ -28,6 +28,20 @@ function dispalyItems(items) {
 
 // 3. eventListener 등록 ------------------
 
+function updateItems(lists, key, value) {
+  lists.forEach(item => {
+    if (item.dataset[key] === value) {
+      item.classList.remove('invisible');
+    } else {
+      item.classList.add('invisible');
+    }
+  });
+}
+
+function showAllItems(lists) {
+  lists.forEach(item => item.classList.remove('invisible'))
+}
+
 function onButtonClick(event, lists) {
   const dataset = event.target.dataset;
   const key = dataset.key;
@@ -41,22 +55,12 @@ function onButtonClick(event, lists) {
   updateItems(lists, key, value);
 }
 
-function updateItems(lists, key, value) {
-  lists.forEach(item => {
-    if (item.dataset[key] === value) {
-      item.classList.remove('invisible');
-    } else {
-      item.classList.add('invisible');
-    }
-  });
-}
-
 function setEventListeners(items) {
   const logo = document.querySelector('.logo');
   const buttons = document.querySelector('.shoping_nav');
   const lists = document.querySelectorAll('.item');
 
-  logo.addEventListener('click', () => dispalyItems(items));
+  logo.addEventListener('click', () => showAllItems(lists));
   buttons.addEventListener('click', event => onButtonClick(event, lists));
 }
 
