@@ -41,7 +41,7 @@ body {
 /* HEADER */
 .logo {
   display: block;
-  margin: 0 auto;
+  margin: calc(var(--base-space) * 3) auto 0;
   transition: transform var(--animation-duration) ease;
   cursor: pointer;
 }
